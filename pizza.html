@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peppi's Pizza Parlour</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Peppi's Pizza Parlour</h1>
+
+      <div class="form-section">
+        <div class="crust_type_size">
+          <!-- Crust Type -->
+          <div class="crust">
+            <fieldset>
+              <legend>Select Crust Type</legend>
+              <input type="radio" name="crust" id="thin" value="Thin" />
+              <label for="thin">Thin</label><br />
+              <input type="radio" name="crust" id="thick" value="Thick" />
+              <label for="thick">Thick</label><br />
+              <input type="radio" name="crust" id="pan" value="Pan" />
+              <label for="pan">Pan</label><br />
+            </fieldset>
+          </div>
+          <!-- Size Selection -->
+          <div class="size">
+            <fieldset>
+              <legend>Select Size</legend>
+              <input type="radio" name="size" id="small" value="Small" />
+              <label for="small">Small</label><br />
+              <input type="radio" name="size" id="medium" value="Medium" />
+              <label for="medium">Medium</label><br />
+              <input type="radio" name="size" id="large" value="Large" />
+              <label for="large">Large</label><br />
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toppings Selection -->
+      <fieldset>
+        <legend>Select Toppings</legend>
+        <div class="checkbox-group">
+          <div>
+            <input type="checkbox" id="ham" value="Ham" />
+            <label for="ham">Ham</label><br />
+            <input type="checkbox" id="beef" value="Beef" />
+            <label for="beef">Beef</label><br />
+            <input type="checkbox" id="pepperoni" value="Pepperoni" />
+            <label for="pepperoni">Pepperoni</label><br />
+            <input type="checkbox" id="sausage" value="Sausage" />
+            <label for="sausage">Sausage</label><br />
+          </div>
+          <div>
+            <input type="checkbox" id="peppers" value="Peppers" />
+            <label for="peppers">Peppers</label><br />
+            <input type="checkbox" id="onions" value="Onions" />
+            <label for="onions">Onions</label><br />
+            <input type="checkbox" id="olives" value="Olives" />
+            <label for="olives">Olives</label><br />
+            <input type="checkbox" id="mushrooms" value="Mushrooms" />
+            <label for="mushrooms">Mushrooms</label><br />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Phone Number -->
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" placeholder="123-4567" /><br />
+
+      <!-- Buttons -->
+      <button onclick="placeOrder()">Place Order</button>
+      <button onclick="clearForm()">Clear</button>
+
+      <!-- Order Summary -->
+      <div class="order-summary" id="order-summary"></div>
+    </div>
+
+    <script src="pizza.js"></script>
+  </body>
+</html>
