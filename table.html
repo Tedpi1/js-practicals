@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barclays English Premier League Standings</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+    #searchInput {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 50%;
+    }
+    .title-row {
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for team names...">
+
+<table id="standingsTable">
+  <thead>
+    <tr class="title-row">
+      <td colspan="9">Barclays English Premier League Standings</td>
+    </tr>
+    <tr>
+      <th>POS</th>
+      <th>TEAM</th>
+      <th>P</th>
+      <th>W</th>
+      <th>D</th>
+      <th>L</th>
+      <th>F</th>
+      <th>A</th>
+      <th>Pts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Arsenal</td>
+      <td>8</td>
+      <td>6</td>
+      <td>1</td>
+      <td>1</td>
+      <td>18</td>
+      <td>9</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Chelsea</td>
+      <td>8</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>14</td>
+      <td>5</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Liverpool</td>
+      <td>8</td>
+      <td>5</td>
+      <td>2</td>
+      <td>1</td>
+      <td>13</td>
+      <td>7</td>
+      <td>17</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+function searchTable() {
+  const input = document.getElementById("searchInput");
+  const filter = input.value.toUpperCase();
+  const table = document.getElementById("standingsTable");
+  const tr = table.getElementsByTagName("tr");
+
+  for (let i = 2; i < tr.length; i++) { // Start from row 2 to skip title and headers
+    const td = tr[i].getElementsByTagName("td")[1]; // Team name column
+    if (td) {
+      const txtValue = td.textContent || td.innerText;
+      tr[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
