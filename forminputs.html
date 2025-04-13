@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration Form</title>
+</head>
+<body>
+    <form>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="first_name"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="last_name"></td>
+            </tr>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Social Network <br>(Select all that apply)</td>
+                <td>
+                    <input type="checkbox" name="social[]" value="twitter"> Twitter<br>
+                    <input type="checkbox" name="social[]" value="facebook"> Facebook<br>
+                    <input type="checkbox" name="social[]" value="linkedin"> LinkedIn
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+ 
